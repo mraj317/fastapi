@@ -24,3 +24,8 @@ def root():
 @app.get('/posts')
 async def get_posts():
     return {"posts": my_posts}
+
+
+@app.get('/posts/{post_id}')
+async def get_post(post_id: int):
+    return {"post_id": post_id}
